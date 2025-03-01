@@ -24,6 +24,7 @@ return {
         local servers = {
             lua_ls = {},
             stylua = {},
+            djlint = {},
         }
 
         require("mason-tool-installer").setup({

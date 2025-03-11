@@ -22,10 +22,5 @@ return {
         require("telescope").load_extension("fzf")
         require("telescope").load_extension("ui-select")
         require("telescope").load_extension("file_browser")
-
-        -- Key mapping for Telescope file browser
-        vim.keymap.set('n', '<leader>e',
-            require('telescope').extensions.file_browser.file_browser,
-            { noremap = true, silent = true })
     end,
 }

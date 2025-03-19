@@ -5,12 +5,26 @@ return {
         default_settings = {
             -- rust-analyzer language server configuration
             ['rust-analyzer'] = {
-                timeout_ms = 30000,
                 cargo = {
+                    allFeatures = true,
                     loadOutDirsFromCheck = true,
+                    buildScripts = {
+                        enable = true,
+                    },
                 },
-                checkOnSave = {
-                    command = "clippy",
+                -- Add clippy lints for Rust if using rust-analyzer
+                checkOnSave = true,
+                -- Enable diagnostics if using rust-analyzer
+                diagnostics = {
+                    enable = true,
+                },
+                procMacro = {
+                    enable = true,
+                    ignored = {
+                        ["async-trait"] = { "async_trait" },
+                        ["napi-derive"] = { "napi" },
+                        ["async-recursion"] = { "async_recursion" },
+                    },
                 },
             },
         },

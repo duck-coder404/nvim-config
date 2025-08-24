@@ -15,11 +15,11 @@ return {
             extensions = {
                 file_browser = {
                     hijack_netrw = true,
+                    hidden = true,
                 }
-            }
+            },
         })
 
-        require("telescope").load_extension("fzf")
         require("telescope").load_extension("ui-select")
         require("telescope").load_extension("file_browser")
     end,

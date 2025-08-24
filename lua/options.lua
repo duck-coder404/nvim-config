@@ -11,6 +11,9 @@ vim.g.have_nerd_font = false
 vim.opt.showmode = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+-- to enable folds
+vim.opt.foldmethod = "indent"
+vim.opt.foldlevel = 99 -- all folds open on startup
 
 -- Configure how new splits should be opened
 vim.opt.splitright = true

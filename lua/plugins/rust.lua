@@ -1,4 +1,5 @@
 return {
+    'rust-lang/rust.vim',
     'mrcjkb/rustaceanvim',
     lazy = false, -- This plugin is already lazy
     server = {
